@@ -90,14 +90,12 @@ class MainActivity : AppCompatActivity() {
         val list = mutableListOf(
             Plans(1, 12, 4247, false, resources.getColor(R.color.square_card_bg_one)),
             Plans(2, 9, 5580, true, resources.getColor(R.color.square_card_bg_two)),
-            Plans(3, 6, 8260, false, resources.getColor(R.color.square_card_bg_three))
+            Plans(3, 6, 8260, false, resources.getColor(R.color.square_card_bg_three)),
+            Plans(4, 3, 16520, false, resources.getColor(R.color.square_card_bg_four))
         )
 
-        println(list)
-        // Add a list of items in
         recyclerView.adapter = plansAdapter
         plansAdapter.submitList(list)
-
 
         val button: TextView = bottomSheetViewTwo.findViewById(R.id.second_bottom_sheet_cta)
         val secondToggleIcon = bottomSheetViewTwo.findViewById<ImageView>(R.id.toggle_icon_two)
@@ -142,7 +140,6 @@ class MainActivity : AppCompatActivity() {
             )
 
         bottomSheetDialogThree.setOnDismissListener {
-            // execute action when the bottom sheet dialog is dismissed
             val secondToggleIcon = bottomSheetViewTwo.findViewById<ImageView>(R.id.toggle_icon_two)
             val titleTextTwo = bottomSheetViewTwo.findViewById<TextView>(R.id.second_title)
             val subtitleTextTwo = bottomSheetViewTwo.findViewById<TextView>(R.id.second_subtitle)
