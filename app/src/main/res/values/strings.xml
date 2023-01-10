@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Stack View</string>
+    <string name="open_view_stack">Open view stack</string>
+    <string name="title_text_one">Title text for first bottom sheet</string>
+    <string name="title_text_two">Title text for Second bottom sheet</string>
+    <string name="proceed_to_emi_selection">Proceed to EMI Selection</string>
+    <string name="select_your_bank_account">Select your bank account</string>
+    <string name="first_layout_title">Vishnu, How much do you need?</string>
+    <string name="third_layout_title">where should we send the money?</string>
+    <string name="first_layout_subtitle">move the dialer and set any amount you need up to 487,564</string>
+    <string name="second_layout_subtitle">choose one of our recommended plan or make your own</string>
+    <string name="third_layout_subtitle">amount will be credited to this bank account, EMI will also be debited from this bank account</string>
+    <string name="second_layout_title">How do you wish to repay?</string>
+    <string name="tap_for_1_click_kyc">Tap for 1-Click KYC</string>
+    <string name="image_text">stash is instant, money will be credited within seconds.</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="change_account">Change account</string>
+    <string name="account_number">50100117009192</string>
+    <string name="for_months">for %1$d months</string>
+    <string name="rupees">&#8377; %1$d</string>
+    <string name="create_your_own_plan">Create your own plan</string>
+    <string name="credit_amount">credit amount</string>
+    <string name="emi">EMI</string>
+    <string name="duration">duration</string>
+    <string name="recommended">recommended</string>
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_container_two"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/second_layout_shape">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/toggle_icon_two"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_arrow_down_24"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/second_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/second_layout_title"
+        android:textColor="#7B8591"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/toggle_icon_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/second_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/second_layout_subtitle"
+        android:textColor="#7B8591"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/second_title"
+        app:layout_constraintStart_toStartOf="@+id/second_title"
+        app:layout_constraintTop_toBottomOf="@+id/second_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/second_background_detail_layout"
+        android:layout_width="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/toggle_icon_two"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/emi_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/emi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/emi"
+                android:textColor="#7B8591"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/emi_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:text="4,247 /mo"
+                android:textColor="#7B8591"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/duration_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/duration_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/duration"
+                android:textColor="#7B8591"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/duration_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:text="12 months"
+                android:textColor="#7B8591"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plans_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_subtitle"
+        tools:itemCount="2"
+        tools:listitem="@layout/square_card_view"
+        tools:orientation="horizontal" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/change_plan_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/text_button_bg"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp"
+        android:text="@string/create_your_own_plan"
+        android:textColor="#C1B7BF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/second_bottom_sheet_cta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plans_recycler_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/second_bottom_sheet_cta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cta_style"
+        android:padding="20dp"
+        android:text="@string/select_your_bank_account"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
